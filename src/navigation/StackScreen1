@@ -1,0 +1,16 @@
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import HistoriaPantalla from '../containers/HistoriaPantalla';
+import PanesPantalla from '../containers/PanesPantalla';
+
+const MenuStack = createNativeStackNavigator();
+
+export default function StackScreen1({navigation}) { //LAS DOS VENTANAS POR LAS QUE NAVEGAREMOS
+    return (
+      <MenuStack.Navigator>
+        <MenuStack.Screen name="Historia" component={HistoriaPantalla} />
+        <MenuStack.Screen name="Panes" component={PanesPantalla} />
+      </MenuStack.Navigator>
+    );
+  }
